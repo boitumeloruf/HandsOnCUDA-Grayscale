@@ -2,6 +2,9 @@
 # CUDA-GrayscaleCvt
 ####################################################################################################
 
+# Qt Config
+QT += gui widgets
+
 # configuration
 TARGET = CUDA-GraysscaleCvt
 TEMPLATE = app
@@ -10,6 +13,12 @@ message("Building "$$TARGET" ("$$TEMPLATE")")
 
 # build configuration
 include($$PWD/build_config.pri)
+
+#---------------------------------------------------------------------------------------------------
+# Compiler defines
+
+# define target name
+DEFINES += TARGET_NAME=\\\"$$TARGET\\\"
 
 #---------------------------------------------------------------------------------------------------
 # Compiler Configuration
@@ -33,9 +42,15 @@ unix {
 #---------------------------------------------------------------------------------------------------
 # C++ Sources
 
-HEADERS +=
+HEADERS += \
+    $$PWD/src/cudautils_memory.h \
+    $$PWD/src/cudautils_common.hpp \
+    $$PWD/src/cudautils_devices.h
 
-SOURCES +=
+SOURCES += \
+    $$PWD/src/main.cpp \
+    $$PWD/src/cudautils_memory.cpp \
+    $$PWD/src/cudautils_devices.cpp \
 
 #---------------------------------------------------------------------------------------------------
 # CUDA build
