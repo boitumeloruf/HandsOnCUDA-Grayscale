@@ -93,7 +93,6 @@ cv::Mat downloadCudaArrayToImage(cudaArray* iCuArray, const cv::Size iImgSize)
   return image;
 }
 template cv::Mat downloadCudaArrayToImage<uchar>(cudaArray*, const cv::Size);
-template cv::Mat downloadCudaArrayToImage<uint>(cudaArray*, const cv::Size);
 template cv::Mat downloadCudaArrayToImage<int>(cudaArray*, const cv::Size);
 template cv::Mat downloadCudaArrayToImage<float>(cudaArray*, const cv::Size);
 

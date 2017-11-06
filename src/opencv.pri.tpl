@@ -7,7 +7,7 @@ OCV_ROOT_DIR = <edit-here>
 
 # add directories and libraries to variables
 unix {
-	message("Using OpenCV "$${OCV_VERS_STR}", GCC "$${GCC_VERS_STR}")
+	message("Using OpenCV "$${OCV_VERS_STR}", GCC "$${GCC_VERS_STR})
 
 	INCLUDEPATH += $${OCV_ROOT_DIR}/include/ \
 		           $${OCV_ROOT_DIR}/include/opencv/
