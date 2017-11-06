@@ -26,10 +26,10 @@ This program is developed and tested on Ubuntu 16.04 with GCC 5.4 and depends on
 
 ## Expected Results
 
-<b>Input</b> [Martull et al. (2012)]:
+<b>Input</b> [Martull et al. (2012)]: <br>
 ![alt text][input]
 
-<b>Output</b>:
+<b>Output</b>: <br>
 ![alt text][output]
 
 [input]: assets/tsukuba.png
