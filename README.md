@@ -24,6 +24,8 @@ This program is developed and tested on Ubuntu 16.04 with GCC 5.4 and depends on
 - Open ```CUDA-GrayscaleCvt.pro``` with QtCreator or run ```qmake CUDA-GrayscaleCvt.pro```.
 - Build and run with image as command line argument. ```CUDA-GrayscaleCvt ../assets/tsukuba.png```. Build output is located in bin/.
 
+NOTE: You might need to add the path to the ```.so``` files of OpenCV and CUDA to the LD_LIBRARY_PATH (see qmake output) if you want to start the program from the terminal.
+
 ## Expected Results
 
 <b>Input</b> [Martull et al. (2012)]: <br>

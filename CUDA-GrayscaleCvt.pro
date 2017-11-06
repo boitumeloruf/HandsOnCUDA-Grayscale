@@ -64,7 +64,7 @@ CUDA_HEADERS += \
 
 CUDA_ARCH = compute_50
 NVCCFLAGS     = --compiler-options -fno-strict-aliasing -use_fast_math --ptxas-options=-v \
- -Wno-deprecated-gpu-targets --shared -Xcompiler -fPIC -c
+ -Wno-deprecated-gpu-targets --shared -Xcompiler -fPIC
 CUDA_INC = $$join(INCLUDEPATH,' -I','-I',' ')
 
 cuda_build.commands = $$CUDA_ROOT_DIR/bin/nvcc -m64 -O3  -arch=$$CUDA_ARCH -c $$NVCCFLAGS \
