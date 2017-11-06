@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////////////////////////
+//! Copyright 2017 Boitumelo Ruf. All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+
 #include "cudagrayscalecvt.cuh"
 
 // std
@@ -48,6 +52,7 @@ cv::Mat runCudaGrayscaleCvt(const cv::Mat& inputImg)
 
 
   // First run the warmup kernel (which we'll use to get the GPU in the correct max power state
+  // NOTE: Not needed if kernel is run on a image sequence
   convertToGrayscale<<<numBlocks, numThreads>>>(inputImgTex, outputArr, imgSize.width);
   cudaDeviceSynchronize();
 
@@ -93,5 +98,3 @@ cv::Mat runCudaGrayscaleCvt(const cv::Mat& inputImg)
 
   return outputImg;
 }
-
-

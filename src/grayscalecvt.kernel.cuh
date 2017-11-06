@@ -6,7 +6,14 @@
 #define BLOCKSIZE_Y 32
 
 ////////////////////////////////////////////////////////////////////////////////
-//!
+//! Per pixel kernel to convert color into grayscale. The kernel expects 4 bytes
+//! per pixel which hold the color coded in RGBA. It uses an unsigned int to fetch
+//! the pixel data from the input texture and references each channel as a uchar array
+//! of size 4. After computing the grayscale value it saves the result into the data
+//! array of the output image.
+//! @param[in] inputImgTex Texture object of the input image.
+//! @param[in] outputImg Data array of the output image.
+//! @param[in] iWidth Image width.
 ////////////////////////////////////////////////////////////////////////////////
 __global__ void convertToGrayscale(cudaTextureObject_t inputImgTex, uchar* outputImg,
                                   int iWidth)

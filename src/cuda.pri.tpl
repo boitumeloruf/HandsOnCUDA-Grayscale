@@ -1,6 +1,10 @@
 CUDA_VERS_STR = <edit-here>
 GCC_VERS_STR = <edit-here>
+
+# Example: /usr/local/cuda
 CUDA_ROOT_DIR = <edit-here>
+
+# Example: /usr/local/cuda/samples
 CUDA_SDK_DIR = <edit-here>
 
 
